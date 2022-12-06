@@ -24,11 +24,10 @@ const palyBackStyle = {
   cursor: "pointer",
 }
 const playlist = [
-  // {
-  //   src: 'https://content.blubrry.com/takeituneasy/lex_ai_balaji_srinivasan.mp3',
-  // },
-  { src: 'https://hanzluo.s3-us-west-1.amazonaws.com/music/wuyuwuqing.mp3' },
-  { src: 'https://youtu.be/Ov0YGGSY6gY' },
+  {
+    src: 'https://content.blubrry.com/takeituneasy/lex_ai_balaji_srinivasan.mp3',
+  },
+
 ];
 const App = () => {
   const audioPlayer: any = useRef();
