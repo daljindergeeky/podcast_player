@@ -33,7 +33,7 @@ const App = () => {
   const audioPlayer: any = useRef();
   const theme = useTheme();
 
-  const [palyback, setPlayback] = useState<number>(1);
+  const [palyback, setPlayback] = useState<string>('1');
   const [play, setPlay] = useState<Boolean>(false)
   const [currentTrack, setTrackIndex] = useState(0);
   const [elapsed, setElapsed] = useState(0);
@@ -51,13 +51,13 @@ const App = () => {
     );
   };
   const playBackRateInc = () => {
-    setPlayback(audioPlayer.current.audio.current.playbackRate += 0.25);
+    setPlayback(`+${audioPlayer.current.audio.current.playbackRate += 0.25}`);
    
   };
 
   const playBackRateDec = () => {
     audioPlayer.current.audio.current.playbackRate > 0.25 &&
-      setPlayback((audioPlayer.current.audio.current.playbackRate -= 0.25));
+      setPlayback(`${audioPlayer.current.audio.current.playbackRate > 1 ? '+' :'-'}${(audioPlayer.current.audio.current.playbackRate -= 0.25)}`);
 
   };
   const handleListen = (e: any) => {

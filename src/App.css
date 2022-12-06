@@ -58,6 +58,7 @@
 
 .rhap_progress-indicator {
     top: -3px !important;
+    background: #fff !important
 }
 
 .rhap_volume-container .rhap_volume-bar-area {
@@ -157,7 +158,7 @@
     }
 }
 
-@media(max-width: 400px) {
+@media(max-width: 600px) {
     .rhap_time {
         bottom: 0;
         right: 20px;
